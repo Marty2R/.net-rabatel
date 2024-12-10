@@ -28,3 +28,34 @@
 /Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/obj/Debug/net8.0/mvc.pdb
 /Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/obj/Debug/net8.0/mvc.genruntimeconfig.cache
 /Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/obj/Debug/net8.0/ref/mvc.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/appsettings.Development.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/appsettings.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc.staticwebassets.runtime.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc.deps.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc.runtimeconfig.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/mvc.pdb
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.AssemblyInfoInputs.cache
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.AssemblyInfo.cs
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.csproj.CoreCompileInputs.cache
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.MvcApplicationPartsAssemblyInfo.cache
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.RazorAssemblyInfo.cache
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.RazorAssemblyInfo.cs
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.sourcelink.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets.build.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets.development.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets/msbuild.mvc.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets/msbuild.build.mvc.props
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.mvc.props
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.mvc.props
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/scopedcss/bundle/mvc.styles.css
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/scopedcss/projectbundle/mvc.bundle.scp.css
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/refint/mvc.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.pdb
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.genruntimeconfig.cache
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/ref/mvc.dll

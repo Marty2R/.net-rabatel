@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/mvc.csproj",
+      "projectUniqueName": "/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/mvc.csproj",
       "projectName": "mvc",
-      "projectPath": "/Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/mvc.csproj",
+      "projectPath": "/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/mvc.csproj",
       "packagesPath": "/Users/rabatelmarty/.nuget/packages/",
-      "outputPath": "/Users/rabatelmarty/Documents/ISITECH/A3/S3 - .NET/projects/mvcTemplate/obj/",
+      "outputPath": "/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/rabatelmarty/.nuget/NuGet/NuGet.Config"
