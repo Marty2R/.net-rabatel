@@ -1,13 +1,18 @@
-using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+using mvc.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ClassDbContext>(
-    options => options.UseMySql();
+var serverVersion = new MySqlServerVersion(new Version(8, 0, 35));
+builder.Services.AddDbContext<ApplicationDbContext>(
+    options => options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), serverVersion)
 );
+
+
 
 var app = builder.Build();
 
