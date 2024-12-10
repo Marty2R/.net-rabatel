@@ -11,6 +11,11 @@ La vue doit impérativement avoir le lmême nom que le méthode.
 
 **Actions** = Methodes controlleurs !
 
+### Ajout de conditions form :
+
+Dans le class :
+![Alt text](condition.png "Title")
+
 ### Structure :
 
 ![Alt text](structure.png "Title")
@@ -22,3 +27,7 @@ La vue doit impérativement avoir le lmême nom que le méthode.
 - notnet new -n mvc - o mvcTemplate
 - cd mvcProject
 - dotnet run
+
+## Connection a une DB :
+
+- Pomelo sur nuget.org
