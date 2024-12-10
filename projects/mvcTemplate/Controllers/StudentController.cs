@@ -21,6 +21,23 @@ namespace mvc.Controllers
             new() { AdmissionDate = new DateTime(2023, 9, 1), Age = 18, FirstName = "Michael", GPA = 3.4, Id = 9, LastName = "Brown", Major = Major.OTHER },
         };
 
+        public ActionResult Add()
+        {
+            return View("~/Views/Student/Add.cshtml");
+        }
+
+        [HttpPost]
+        public ActionResult Add(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                student.Id = students.Count + 1;
+                students.Add(student);
+                return RedirectToAction("Index");
+            }
+            return View("~/Views/Student/Add.cshtml", student);
+        }
+
         public ActionResult Delete(int id)
         {
             var studentToDelete = students.FirstOrDefault(s => s.Id == id);
