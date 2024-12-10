@@ -31,7 +31,6 @@ namespace mvc.Controllers
             {
                 return View();
             }
-            // Ajouter le teacher
             _context.Students.Add(student);
 
             // Sauvegarder les changements
