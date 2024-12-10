@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<Student>
+
+<p>Student Liste</p>
+
+<table>
+    <tr>
+        <td>
+            <p>Nom</p>
+        </td>
+        <td>
+            <p>Prenom</p>
+        </td>
+        <td>
+            <p>Age</p>
+        </td>
+        <td>
+            <p>Supprimer</p>
+        </td>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>
+                <p>@student.FirstName</p>
+            </td>
+            <td>
+                <p>@student.LastName</p>
+            </td>
+            <td>
+                <p>@student.Age</p>
+            </td>
+            <td>
+                <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
+                <a asp-controller="Student" asp-action="StudentDetail" asp-route-id="@student.Id"
+                    class="btn btn-blue">Detail</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<style>
+    td {
+        width: 200px;
+        margin: 0px;
+        border: solid 1px black;
+        padding: 5px
+    }
+
+    td p {
+        margin: auto;
+    }
+</style>
