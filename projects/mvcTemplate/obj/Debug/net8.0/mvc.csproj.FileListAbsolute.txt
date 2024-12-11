@@ -133,3 +133,6 @@
 /Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.csproj.Up2Date
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.UI.dll
+/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/obj/Debug/net8.0/mvc.MvcApplicationPartsAssemblyInfo.cs

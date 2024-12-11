@@ -19,10 +19,10 @@
             <p>Prenom</p>
         </td>
         <td>
-            <p>Age</p>
+            <p>Supprimer</p>
         </td>
         <td>
-            <p>Supprimer</p>
+            <p>ID</p>
         </td>
     </tr>
     @foreach (var student in Model)
@@ -35,12 +35,12 @@
                 <p>@student.LastName</p>
             </td>
             <td>
-                <p>@student.Age</p>
-            </td>
-            <td>
                 <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
                 <a asp-controller="Student" asp-action="StudentDetail" asp-route-id="@student.Id"
                     class="btn btn-blue">Detail</a>
+            </td>
+            <td>
+                <p>@student.Id</p>
             </td>
         </tr>
     }

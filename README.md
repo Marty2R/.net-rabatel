@@ -30,4 +30,33 @@ Dans le class :
 
 ## Connection a une DB :
 
-- Pomelo sur nuget.org
+- Sur nuget.org, installer ces packages à la racine du projet :
+  - install : Microsoft.EntityFrameworkCore.Design
+  - install : pomelo.ENtityFrameworkCore.MySql
+
+**Authentification** : identity (package)
+
+**viewModel** sert au contrôle du format des veleurs retourné par le formulaire.
+
+## Créer une migraton de la db :
+
+- dotnet ef migrations add initialMigration
+- dotnet ef database update
+
+## Auth :
+
+- Installer les dependences :
+
+  1. dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.0.0
+  2. dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
+
+- ApplicationDbContext.cs :
+
+  1. Class ApplicationDbContext : IdentityDbContext<Student> {} --> la classe doit hérité de IdentityDbContext
+
+- Program.cs :
+
+![Alt text](program-code.png "Title")
+![Alt text](program-code-2.png "Title")
+
+- dotnet ef migrations add IdentitySetup

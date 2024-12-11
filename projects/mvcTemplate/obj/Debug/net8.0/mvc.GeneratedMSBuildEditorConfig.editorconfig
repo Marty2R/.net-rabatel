@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/DetailStudent/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGV0YWlsU3R1ZGVudC9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

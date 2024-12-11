@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 using mvc.Data;
 using mvc.Models;
 
@@ -7,14 +8,19 @@ namespace mvc.Controllers
 
     public class StudentController : Controller
     {
-        // champ prive pour stocker le dbcontext
-        private readonly ApplicationDbContext _context;
+        private readonly UserManager<Student> _userManager;
+
         // GET: StudentController
         // Creation d'une liste statique de Student
 
-        public StudentController(ApplicationDbContext context)
+        public StudentController(UserManager<Student> userManager)
         {
-            _context = context;
+            _userManager = userManager;
+        }
+
+        public ActionResult Register()
+        {
+            return View("~/Views/Auth/Register.cshtml");
         }
 
 
@@ -24,41 +30,66 @@ namespace mvc.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Student student)
+        public async Task<IActionResult> Add(Student student)
         {
-            // Declencher le mecanisme de validation
+            if (student == null)
+            {
+                return BadRequest("Student object is null.");
+            }
+
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            _context.Students.Add(student);
 
-            // Sauvegarder les changements
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            // Assurez-vous que le UserName est défini
+            student.UserName = student.Email;
+            student.Age = 20;
+            student.GPA = 0;
+            student.Age = 2;
+
+            var result = await _userManager.CreateAsync(student);
+            if (!result.Succeeded)
+            {
+                // Gérez les erreurs de création ici
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return View(student);
+            }
+
+            return RedirectToAction("Index", "Student");
         }
 
-
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            var studentToDelete = _context.Students.FirstOrDefault(s => s.Id == id);
-            if (studentToDelete != null)
+            var student = _userManager.FindByIdAsync(id).Result;
+            if (student != null)
             {
-                _context.Students.Remove(studentToDelete);
-                _context.SaveChanges();
+                _userManager.DeleteAsync(student).Wait();
             }
             return RedirectToAction("Index");
         }
 
-        public ActionResult StudentDetail(int id)
+        public async Task<ActionResult> StudentDetail(int id)
         {
-            var studentDetail = _context.Students.FirstOrDefault(s => s.Id == id);
-            return View("~/Views/DetailStudent/index.cshtml", studentDetail);
+            var student = await _userManager.FindByIdAsync(id.ToString());
+            if (student != null)
+            {
+                Console.WriteLine("DATAS : " + student);
+                return View("~/Views/DetailStudent/index.cshtml", student);
+            }
+            else
+            {
+                Console.WriteLine("ERROR");
+                return NotFound();
+            }
         }
 
         public ActionResult Index()
         {
-            var students = _context.Students.ToList();
+            var students = _userManager.Users.ToList();
             return View(students);
         }
 

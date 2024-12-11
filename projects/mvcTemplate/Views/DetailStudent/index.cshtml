@@ -6,9 +6,15 @@
 
 @model Student
 
-<h1>Detail Student</h1>
-<p>@Model.FirstName @Model.LastName</p>
-<p>Age: @Model.Age</p>
-<p>GPA: @Model.GPA</p>
-<p>Major: @Model.Major</p>
-<p>Admission Date: @Model.AdmissionDate</p>
+@if (Model != null)
+{
+    <h1>Detail Student</h1>
+    <p>First Name: @Model.FirstName</p>
+    <p>Last Name: @Model.LastName</p>
+    <p>Email: @Model.Email</p>
+    <p>Phone Number: @Model.PhoneNumber</p>
+}
+else
+{
+    <h1>No student found</h1>
+}
