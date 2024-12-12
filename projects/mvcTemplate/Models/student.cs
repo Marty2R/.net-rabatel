@@ -20,4 +20,5 @@ public class Student : IdentityUser
     public double GPA { get; set; }
     public Major Major { get; set; }
     public DateTime AdmissionDate { get; set; }
+
 }

@@ -44,5 +44,17 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete(string id) // supprime l'enseignant de la base de données
+        {
+            var teacher = _context.Teacher.Find(int.Parse(id));
+            if (teacher != null)
+            {
+                _context.Teacher.Remove(teacher);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

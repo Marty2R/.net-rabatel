@@ -26,6 +26,10 @@
                     <td>@teacher.FirstName</td>
                     <td>@teacher.LastName</td>
                     <td>@teacher.Salary €</td>
+                    <td>
+                        <a asp-controller="Teacher" asp-action="Delete" asp-route-id="@teacher.Id"
+                            class="btn btn-danger">Supprimer</a>
+                    </td>
                 </tr>
             }
         </tbody>

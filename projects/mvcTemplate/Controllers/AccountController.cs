@@ -22,21 +22,24 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginViewModel model)
     {
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
 
-        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: true);
-        if (result.Succeeded)
-        {
-            return RedirectToAction("Index", "Home");
-        }
-        else
+        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+        Console.Write("result : " + result);
+
+        if (!result.Succeeded)
         {
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(model);
         }
+
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("Login", "Account");
     }
 
     [HttpGet]
@@ -58,8 +61,8 @@ public class AccountController : Controller
             UserName = model.Email,
             Email = model.Email,
             PasswordHash = model.Password,
-            FirstName = "TEST",
-            LastName = "TEST",
+            FirstName = model.FirstName,
+            LastName = model.LastName,
         };
 
         var result = await _userManager.CreateAsync(user, model.Password);
@@ -85,4 +88,5 @@ public class LoginViewModel
     public string Email { get; set; }
     public string Password { get; set; }
     public bool RememberMe { get; set; }
+
 }
