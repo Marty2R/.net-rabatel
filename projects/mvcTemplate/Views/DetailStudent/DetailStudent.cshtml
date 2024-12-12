@@ -5,17 +5,28 @@
 }
 
 @model Student
-
-@if (Model != null)
-{
-    <h1>Detail Student</h1>
-    <p>First Name: @Model.FirstName</p>
-    <p>Last Name: @Model.LastName</p>
-    <p>Email: @Model.Email</p>
-    <p>Email: @Model.Age</p>
-    <p>Email: @Model.AdmissionDate</p>
-}
-else
-{
-    <h1>No student found</h1>
-}
+<div class="container">
+    <h1 class="text-center">Detail Student</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>First Name</th>
+            <td>@Model.FirstName</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>@Model.LastName</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>@Model.Age</td>
+        </tr>
+        <tr>
+            <th>Admission Date</th>
+            <td>@Model.AdmissionDate</td>
+        </tr>
+    </table>
+</div>

@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGV0YWlsU3R1ZGVudC9EZXRhaWxTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Event/AddEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvQWRkRXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Event/Event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvRXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Student/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudC9pbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Teacher/AddTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9BZGRUZWFjaGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/rabatelmarty/Desktop/dotnet-rabatel/projects/mvcTemplate/Views/Teacher/index.cshtml]

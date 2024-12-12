@@ -1,23 +1,47 @@
 using Microsoft.AspNetCore.Mvc;
-
+using mvc.Data;
 using mvc.Models;
 
 namespace mvc.Controllers
 {
     public class TeacherController : Controller
     {
-        // GET: TeacherController
-        // Creation d'une liste statique de Student
-        private static List<Teacher> teacher = new()
+        private readonly ApplicationDbContext _context;
+
+        // GET: EventController
+
+        public TeacherController(ApplicationDbContext context)
         {
-            new() { Id = 1, FirstName = "John", LastName = "Doe", Age = 35, Salary = 75000, Subject = "Mathematics", HireDate = new DateTime(2020, 8, 15) },
-            new() { Id = 2, FirstName = "Jane", LastName = "Smith", Age = 42, Salary = 82000, Subject = "Physics", HireDate = new DateTime(2018, 9, 1) },
-            new() { Id = 3, FirstName = "Robert", LastName = "Johnson", Age = 38, Salary = 78000, Subject = "Chemistry", HireDate = new DateTime(2019, 1, 10) },
-            new() { Id = 4, FirstName = "Mary", LastName = "Williams", Age = 45, Salary = 85000, Subject = "Biology", HireDate = new DateTime(2017, 3, 20) },
-        };
+            _context = context;
+        }
         public ActionResult Index()
         {
-            return View(teacher);
+            var Teachers = _context.Teacher.ToList();
+            return View(Teachers);
+        }
+
+        public ActionResult Add()
+        {
+            return View("~/Views/Teacher/AddTeacher.cshtml");
+        }
+
+        [HttpPost]
+        public IActionResult AddTeacher(Teacher teacher)
+        {
+            if (teacher == null)
+            {
+                return BadRequest("Teacher object is null.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            _context.Teacher.Add(teacher);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
     }

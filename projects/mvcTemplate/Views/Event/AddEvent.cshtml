@@ -1,0 +1,48 @@
+@model Event
+
+<h1 class="text-center">Créer Upcoming nouvelle évènement a venir</h1>
+
+<form asp-action="AddEvent" asp-controller="Event" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Title" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="EventDate" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="EventDate" class="form-control" type="datetime-local">
+            <span asp-validation-for="EventDate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Location" class="form-control">
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxParticipants" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="MaxParticipants" class="form-control" type="number">
+            <span asp-validation-for="MaxParticipants" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Create Event" class="btn btn-primary">
+        </div>
+    </div>
+</form>
+
+<div class="text-danger" asp-validation-summary="All"></div>

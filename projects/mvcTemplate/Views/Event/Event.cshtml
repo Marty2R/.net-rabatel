@@ -1,0 +1,36 @@
+@model IEnumerable<Event>
+
+<div class="container">
+    <h2 class="text-center">Upcoming Events</h2>
+    <a asp-controller="Event" asp-action="AddEvent" class="btn btn-primary">Add New Event</a>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Event Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Max Participants</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventItem in Model)
+                {
+                    <tr>
+                        <td>@eventItem.Title</td>
+                        <td>@eventItem.Description</td>
+                        <td>@eventItem.EventDate</td>
+                        <td>@eventItem.Location</td>
+                        <td>@eventItem.MaxParticipants</td>
+                        <td>
+                            <a asp-controller="Event" asp-action="Delete" asp-route-id="@eventItem.Id"
+                                class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -6,55 +6,35 @@
 
 @model IEnumerable<Student>
 
-<p>Student Liste</p>
-
-<a class="btn btn-primary" asp-area="" asp-controller="Student" asp-action="Add">Add new student</a>
-
-<table>
-    <tr>
-        <td>
-            <p>Nom</p>
-        </td>
-        <td>
-            <p>Prenom</p>
-        </td>
-        <td>
-            <p>Supprimer</p>
-        </td>
-        <td>
-            <p>ID</p>
-        </td>
-    </tr>
-    @foreach (var student in Model)
-    {
-        <tr>
-            <td>
-                <p>@student.FirstName</p>
-            </td>
-            <td>
-                <p>@student.LastName</p>
-            </td>
-            <td>
-                <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
-                <a asp-controller="Student" asp-action="ShowDetails" asp-route-id="@student.Id"
-                    class="btn btn-blue">Detail</a>
-            </td>
-            <td>
-                <p>@student.Id</p>
-            </td>
-        </tr>
-    }
-</table>
-
-<style>
-    td {
-        width: 200px;
-        margin: 0px;
-        border: solid 1px black;
-        padding: 5px
-    }
-
-    td p {
-        margin: auto;
-    }
-</style>
+<div class="container">
+    <h2 class="text-center">Student List</h2>
+    <a class="btn btn-primary" asp-area="" asp-controller="Student" asp-action="Add">Add new student</a>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Actions</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.FirstName</td>
+                        <td>@student.LastName</td>
+                        <td>
+                            <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id"
+                                class="btn btn-danger">Delete</a>
+                            <a asp-controller="Student" asp-action="ShowDetails" asp-route-id="@student.Id"
+                                class="btn btn-info">Detail</a>
+                        </td>
+                        <td>@student.Id</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
