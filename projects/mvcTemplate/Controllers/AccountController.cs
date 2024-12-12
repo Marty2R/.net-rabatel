@@ -22,17 +22,20 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginViewModel model)
     {
-
-        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
-        Console.Write("result : " + result);
-
-        if (!result.Succeeded)
+        if (!ModelState.IsValid)
         {
-            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(model);
         }
 
-        return RedirectToAction("Index", "Home");
+        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+
+        if (result.Succeeded)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+        return View(model);
     }
 
     [HttpGet]
