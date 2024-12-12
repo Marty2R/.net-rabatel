@@ -30,7 +30,7 @@ namespace mvc.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Student student)
+        public async Task<IActionResult> Add(Student student) // Ajoute un etudiant en base de données
         {
             if (student == null)
             {
@@ -47,6 +47,7 @@ namespace mvc.Controllers
             student.Age = 20;
             student.GPA = 0;
             student.Age = 2;
+            student.AdmissionDate = DateTime.Now;
 
             var result = await _userManager.CreateAsync(student);
             if (!result.Succeeded)
@@ -62,7 +63,7 @@ namespace mvc.Controllers
             return RedirectToAction("Index", "Student");
         }
 
-        public ActionResult Delete(string id)
+        public ActionResult Delete(string id) // supprime l'etudiant de la base de données
         {
             var student = _userManager.FindByIdAsync(id).Result;
             if (student != null)
@@ -72,22 +73,13 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<ActionResult> StudentDetail(int id)
+        public async Task<IActionResult> ShowDetails(string Id) // Arriche la page detail de l'etudiant 
         {
-            var student = await _userManager.FindByIdAsync(id.ToString());
-            if (student != null)
-            {
-                Console.WriteLine("DATAS : " + student);
-                return View("~/Views/DetailStudent/index.cshtml", student);
-            }
-            else
-            {
-                Console.WriteLine("ERROR");
-                return NotFound();
-            }
+            var student = await _userManager.FindByIdAsync(Id.ToString());
+            return View("~/Views/DetailStudent/DetailStudent.cshtml", student);
         }
 
-        public ActionResult Index()
+        public ActionResult Index() // Affiche la page listing des etudiants
         {
             var students = _userManager.Users.ToList();
             return View(students);
