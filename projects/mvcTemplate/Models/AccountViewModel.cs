@@ -6,11 +6,7 @@ namespace mvc.Models
 
         public string Password { get; set; }
 
-        public string ConfirmedPassword { get; set; }
-
-        public string Firstname { get; set; }
-
-        public string Lastname { get; set; }
+        public bool RememberMe { get; set; }
 
     }
 }

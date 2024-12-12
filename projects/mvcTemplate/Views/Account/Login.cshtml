@@ -1,0 +1,22 @@
+@model LoginViewModel
+<h1>Connexion</h1>
+
+<form asp-action="Login" asp-controller="Account" method="post">
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">Mot de passe</label>
+        <input asp-for="Password" class="form-control" id="exampleInputPassword1">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="RememberMe" class="form-check-input" id="exampleCheck1">
+        <label asp-for="RememberMe" class="form-check-label">Se souvenir de moi</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Connexion</button>
+</form>
+
+<div class="text-danger" asp-validation-summary="All"></div>
