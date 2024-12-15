@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 using mvc.Data;
 using mvc.Models;
 
@@ -23,6 +24,7 @@ namespace mvc.Controllers
             return View("~/Views/Event/Event.cshtml", Events);
         }
 
+        [Authorize]
         public IActionResult Delete(string id) // supprime l'événement de la base de données
         {
             var eventItem = _context.Event.Find(int.Parse(id));
@@ -34,6 +36,7 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public IActionResult AddEvent() // Affiche la vue pour ajouter un événement
         {
             return View("~/Views/Event/AddEvent.cshtml");

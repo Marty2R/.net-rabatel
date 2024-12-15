@@ -29,4 +29,4 @@ Dans la racine du projet
 ## Info :
 
 > [!WARNING]  
-> Le register crée un utilisateur "student" qui permet de créer des "teachers". les routes des pages de d-création sont donc protéger pour que seul un "student" puisse y accéder
+> Le register crée un utilisateur "student" qui permet de créer des "teachers". les routes des pages de d-création sont donc protéger pour que seul un "student" puisse y accéder.
