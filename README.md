@@ -1,62 +1,32 @@
-# .net-rabatel
+# TP .NET
 
-## Prise de notes :
+> [!NOTE]  
+> Ma prise de notes est présente dans le fichier : Prise-de-notes.md
 
-.net = environement windows
-.net core = linux / macOS
-csproj = package.json
-namespace = conteneur qui permet d'organiser et de regrouper des classes et autres types de données liés pour les réutiliser dans un autre fichier ayant le même namespace.
+## Cloner le repo :
 
-La vue doit impérativement avoir le lmême nom que le méthode.
+- git clone https://github.com/Marty2R/dotnet-rabatel.git
+- cd dotnet-rabatel/projects/mvcTemplate
 
-**Actions** = Methodes controlleurs !
+## Installer dans la racine du projet :
 
-### Ajout de conditions form :
+Rendez-vous sur nuget.org et installez :
 
-Dans le class :
-![Alt text](condition.png "Title")
+- Microsoft.EntityFrameworkCore.Design (8.0.0)
+- pomelo.ENtityFrameworkCore.MySql (8.0.0)
 
-### Structure :
-
-![Alt text](structure.png "Title")
-![Alt text](structure2.png "Title")
-
-## Initier un nouveau projet :
-
-- dotnet new list
-- notnet new -n mvc - o mvcTemplate
-- cd mvcProject
-- dotnet run
-
-## Connection a une DB :
-
-- Sur nuget.org, installer ces packages à la racine du projet :
-  - install : Microsoft.EntityFrameworkCore.Design
-  - install : pomelo.ENtityFrameworkCore.MySql
-
-**Authentification** : identity (package)
-
-**viewModel** sert au contrôle du format des veleurs retourné par le formulaire.
-
-## Créer une migraton de la db :
+## Base de données :
 
 - dotnet ef migrations add initialMigration
 - dotnet ef database update
 
-## Auth :
+## Run le projet :
 
-- Installer les dependences :
+Dans la racine du projet
 
-  1. dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.0.0
-  2. dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
+- dotnet run
 
-- ApplicationDbContext.cs :
+## Info :
 
-  1. Class ApplicationDbContext : IdentityDbContext<Student> {} --> la classe doit hérité de IdentityDbContext
-
-- Program.cs :
-
-![Alt text](program-code.png "Title")
-![Alt text](program-code-2.png "Title")
-
-- dotnet ef migrations add IdentitySetup
+> [!WARNING]  
+> Le register crée un utilisateur "student" qui permet de créer des "teachers". les routes des pages de d-création sont donc protéger pour que seul un "student" puisse y accéder
